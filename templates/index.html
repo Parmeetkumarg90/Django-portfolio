@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parmeet Kumar | Portoflio</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="shortcut icon" href="static/images/new-letter.gif" type="image/x-icon">
+</head>
+<body>
+    <a name="home"></a>
+    <header>
+        <div class="logo">
+            <img src="{% static 'images/new-letter.gif' %}" alt="logo">
+            <div class="title">Parmeet Kumar</div>
+        </div>
+        <nav>
+            <div class="logo">
+                <button onclick="shownavbar()">
+                    <img src="{% static 'images/dark mode.png' %}" alt="more">
+                </button>
+            </div>
+            <div class="nav">
+                <a href="#home">Home</a>
+                <a href="#about ">About</a>
+                <a href="#work">Work</a>
+                <a href="#skill">Skills</a>
+                <a href="#project">Project</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="about">
+            <div class="title">
+                Hlo, my name is <br>
+                <div class="name">Parmeet Kumar</div> <br>
+                <div class="typing">
+                    I am a <div id="element"></div> &#128102;&#127995; <br><br>
+                </div>
+                <button>
+                    <a href="{% static 'images/Parmeet Resume.pdf' %}" download>Download Resume</a>
+                </button>
+            </div>
+            <div class="image">
+                <img src="{% static 'images/profile photo.png' %}" width="100px" alt="profile picture">
+            </div>
+        </div>
+        <div id="work">
+            <p>All <span class="name">About Me</span> And <span class="name">My Experience</span></p>
+            <div class="buttons">
+                <button class="work-buttons">About Me</button>
+                <button class="work-buttons">CodeQuotient</button>
+            </div>
+            <div class="work-data">
+                <img src="{% static 'images/profile1.jpg'%}" alt="my_image">
+                <p>This is the last step before selection, where the interview begins with a general introduction
+                    question. While talking about myself, I focused on my project-based learning experience and took the
+                    discussion towards what I learned. Thou it was a 30-minute interview, the discussion itself took 25
+                    minutes in my case. After this, they move to basic DSA questions, where they check my logic-building
+                    and problem-solving skills by providing some set of data and asking questions around it. The
+                    questions were again not too hard, ranging between easy to medium level. After 2-3 DSA questions,
+                    they stepped into development. In this section, they checked my development knowledge by asking
+                    questions about what they had thought in the sessions.
+                    Most of the questions were from javascript and node.js. Moving towards the end of the interview they
+                    asked about the assignment that they asked to solve in the previous days.
+                </p>
+            </div>
+        </div>
+        <div id="skill">
+            <p>All About <span class="name">My Skills</span></p>
+            <div class="skills-data">
+                <div>
+                    <img src="{% static 'images/html-5.png' %}" alt="HTML">
+                    <p>Html</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/css3.png' %}" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/js.png' %}" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/python.png' %}" alt="PYTHON">
+                    <p>Python</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/django.png' %}" alt="DJANGO">
+                    <p>Django</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/mysql.png' %}" alt="MYSQL">
+                    <p>MySql</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/c++.png' %}" alt="C++">
+                    <p>C++ with STL</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/dsa.png' %}" alt="DSA">
+                    <p>Data Structures and Algorithm</p>
+                </div>
+                {% if skill_obj %}
+                    {% for data in skill_obj %}
+                    <div>
+                        <img src="media/{{data.skill_img}}" alt="{{data.skill_name}}">
+                        <p>{{data.skill_name}}</p>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <div id="project">
+            <p>All About<span class="name"> My Projects </span></p>
+            <div class="projects-data">
+                <div>
+                    <img src="{% static 'images/amazon.webp' %}" alt="Poster">
+                    <p>Amazon Clone</p>
+                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
+                    <div class="link">
+                        <a href="#"><img src="{% static 'images/eye.png' %}" alt="See Me"></a>
+                        <a href="#"><img src="{% static 'images/github.png' %}" alt="Github Me"></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="{% static 'images/rockpaperscissorposter.webp' %}" alt="Poster">
+                    <p>Stone Paper Scissor</p>
+                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
+                    <div class="link">
+                        <a href="https://sps-game.parmeetwebsite.wuaze.com"><img src="{% static 'images/eye.png' %}" alt="See Me"></a>
+                        <a href="https://github.com/Parmeetkumarg90/Stone-Paper-Scissor"><img src="{% static 'images/github.png' %}" alt="Github Me"></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="{% static 'images/movieposter.jpg' %}" alt="Poster">
+                    <p>Movie Website</p>
+                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
+                    <div class="link">
+                        <a href="https://movie-app.parmeetwebsite.wuaze.com"><img src="{% static 'images/eye.png' %}" alt="See Me"></a>
+                        <a href="https://github.com/Parmeetkumarg90/MovieApi"><img src="{% static 'images/github.png' %}" alt="Github Me"></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="{% static 'images/dictionaryposter.jpg' %}" alt="Poster">
+                    <p>Dictionary Website</p>
+                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
+                    <div class="link">
+                        <a href="https://dictionary.parmeetwebsite.wuaze.com"><img src="{% static 'images/eye.png' %}" alt="See Me"></a>
+                        <a href="https://github.com/Parmeetkumarg90/DictionaryApi"><img src="{% static 'images/github.png' %}" alt="Github Me"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <p>Take a coffee and talk to me</p>
+            <div id="contact-data">
+                <img src="{% static 'images/contact.png' %}" alt="contact_image">
+                <form action="{% url 'home' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="input-fields">
+                        <input type="text" name="name" required>
+                        <label for="name">Enter your name</label>
+                    </div>
+                    <div class="input-fields">
+                        <input type="tel" name="mobile" maxlength="13" minlength="10" required>
+                        <label for="mobile">Enter your mobile number</label>
+                    </div>
+                    <div class="input-fields">
+                        <input type="email" name="email" required>
+                        <label for="email">Enter your email id here</label>
+                    </div>
+                    <div class="input-fields">
+                        <textarea name="message"></textarea>
+                        <label for="message">Enter your message here</label>
+                    </div>
+                    <input type="reset" value="Reset"><br>
+                    <input type="submit" value="Submit"><br>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p align="center">Design and Build by Parmeet Kumar. All Right Reserved 2024</p>
+        <div id="footer-item">
+            <a href="https://www.linkedin.com/in/parmeet-kumar">
+                <img src="{% static 'images/linkedin.png' %}" alt="linkedin">
+            </a>
+            <a href="https://github.com/Parmeetkumarg90">
+                <img src="{% static 'images/github.png' %}" alt="github">
+            </a>
+            <a href="https://leetcode.com/u/parmeetkumarg90/">
+                <img src="{% static 'images/leetcode.png' %}" alt="leetcode">
+            </a>
+            <a href="mailto:parmeetkumarg90@gmail.com">
+                <img src="{% static 'images/email.png' %}" alt="email">
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "Wtr_-YSW20RcPakgI",
+        });
+    })();
+</script>
+<script src="{% static 'index.js' %}">
+</script>
+</html>
