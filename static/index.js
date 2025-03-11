@@ -16,7 +16,7 @@ let string = new Typed('#element', {
     loop: true
 });
 document.getElementsByClassName("work-buttons")[0].addEventListener("click", () => {
-    document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("src", "images/user photo.gif");
+    document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("src", "static/images/user photo.gif");
     document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("alt", "my_imgage");
     document.getElementsByClassName("work-data")[0].lastElementChild.innerHTML= `My name is Parmeet Kumar. I am a recent graduate (2022-2025) in BCA from Arya PG College, Panipat. I have completed                       an internship at CodeQuotient, where I gained valuable experience in Data Structures and Algorithms, as well as                          Frontend Web Development. I am eager to apply my skills and contribute to your team as a Web Developer.
                     <span class="name">
@@ -26,7 +26,7 @@ document.getElementsByClassName("work-buttons")[0].addEventListener("click", () 
                     </span>`;
 });
 document.getElementsByClassName("work-buttons")[1].addEventListener("click", () => {
-    document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("src", "images/codequotient.jpeg");
+    document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("src", "static/images/codequotient.jpeg");
     document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("alt", "CodeQuotient_image"); document.getElementsByClassName("work-data")[0].lastElementChild.innerText = `
     Completed a 45-day industrial training program at CodeQuotient, where I developed multiple web development projects, tackled data structures and algorithms problems, and honed critical thinking skills in problem-solving. This experience enriched my technical proficiency, enhanced my analytical capabilities, and prepared me for complex challenges in the tech industry. Additionally, I gained practical exposure, a deeper understanding of industry standards, and valuable teamwork experience, collaborating effectively with peers and mentors in a professional environment.
     `;
