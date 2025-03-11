@@ -10,7 +10,6 @@ h11==0.14.0
 idna==3.10
 mysql==0.0.3
 mysql-connector-python==9.2.0
-mysqlclient==2.2.7
 pillow==11.1.0
 psycopg2-binary==2.9.10
 PyMySQL==1.1.1
